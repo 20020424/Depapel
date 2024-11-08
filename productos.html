@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <script src="js/productos.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Tienda en Línea</h1>
+        <div class="cart-icon" onclick="window.location.href='carrito.html'">
+            🛒<span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section id="products">
+        <div class="product" data-name="Producto 1" data-price="10">
+            <h3>Producto 1</h3>
+            <p>Precio: $10</p>
+            <div class="quantity-control">
+                <button onclick="updateQuantity('Producto 1', 10, -1)">-</button>
+                <span id="quantity-Producto 1">0</span>
+                <button onclick="updateQuantity('Producto 1', 10, 1)">+</button>
+            </div>
+            <button onclick="addToCart('Producto 1', 10)">Comprar</button>
+        </div>
+        <div class="product" data-name="Producto 2" data-price="20">
+            <h3>Producto 2</h3>
+            <p>Precio: $20</p>
+            <div class="quantity-control">
+                <button onclick="updateQuantity('Producto 2', 20, -1)">-</button>
+                <span id="quantity-Producto 2">0</span>
+                <button onclick="updateQuantity('Producto 2', 20, 1)">+</button>
+            </div>
+            <button onclick="addToCart('Producto 2', 20)">Comprar</button>
+        </div>
+    </section>
+</body>
+</html>
